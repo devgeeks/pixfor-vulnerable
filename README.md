@@ -20,7 +20,7 @@ There is also:
 
 #### PhoneGap app
 
-`cd app && npm install`
+`cd app` 
 
 `phonegap add ios` (or android, though this only has an iOS "theme")
 
