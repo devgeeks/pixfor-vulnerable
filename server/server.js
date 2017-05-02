@@ -22,6 +22,11 @@ restapi.use( bodyParser.json() );
 restapi.use(bodyParser.urlencoded({
   extended: true
 }));
+restapi.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 restapi.get('/data', function(req, res) {
   db.get("SELECT value FROM counts", function(err, row){
