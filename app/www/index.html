@@ -8,18 +8,6 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
-  <!--
-    http://cspisawesome.com/
-
-     Customize this policy to fit your own app's needs. For more guidance, see:
-       https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-       We recommend using this site to help you build your Content Security Policy easily: http://cspisawesome.com/
-     Some notes:
-       * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-       * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-       * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-         * Enable inline JS: add 'unsafe-inline' to default-src
-     -->
   <!-- As this app is intentionally insecure by default, CSP is commented out in this version -->
   <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
 
@@ -53,10 +41,11 @@
         <div class="pages">
           <div data-page="register" class="page">
             <div class="page-content login-screen-content">
+
               <div class="center">
                 <img alt="Logo" style="margin-top: 20px;" width="120" height="120" src="./img/Pixfor-512.png" />
               </div>
-              <div class="login-screen-title">Pixfor</div>
+              <div class="login-screen-title">Register for Pixfor</div>
               <!-- Login form -->
               <form method="GET" action="http://localhost:3000/user" class="register-form">
                 <div class="list-block">
@@ -98,7 +87,7 @@
               <div class="center">
                 <img alt="Logo" style="margin-top: 20px;" width="120" height="120" src="./img/Pixfor-512.png" />
               </div>
-              <div class="login-screen-title">Pixfor</div>
+              <div class="login-screen-title">Log in to Pixfor</div>
               <!-- Login form -->
               <form action="#" method="GET" class="login-form">
                 <div class="list-block">
@@ -145,8 +134,11 @@
       <div class="navbar">
         <div class="navbar-inner">
           <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+          <div class="left sliding">
+            <a href="#" class="open-login-screen logout link">Log Out</a>
+          </div>
           <div class="center sliding">Pixfor</div>
-          <div class="right">
+          <div class="right sliding">
             <a href="createalbum.html" class="link">Add Album</a>
           </div>
         </div>

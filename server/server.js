@@ -9,24 +9,22 @@ var sha1 = require('sha1');
 
 var express = require('express');
 var restapi = express();
-var bodyParser = require('body-parser')
-var jsonParser = bodyParser.json()
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+var bodyParser = require('body-parser');
+var jsonParser = bodyParser.json();
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 db.serialize(function() {
   db.run("PRAGMA foreign_keys = ON");
 });
 
 restapi.use('/static', express.static(__dirname + '/static'));
-restapi.use( bodyParser.json() );
-restapi.use(bodyParser.urlencoded({
-  extended: true
-}));
 restapi.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+restapi.use(bodyParser.json({limit: '5mb'}));
+restapi.use(bodyParser.urlencoded({limit: '5mb', extended: true}));
 
 restapi.get('/data', function(req, res) {
   db.get("SELECT value FROM counts", function(err, row){
@@ -41,7 +39,7 @@ restapi.get('/user', function(req, res) {
   //db.all("SELECT * from users WHERE username = ?", req.query.username, function(err, rows) {
   //db.get("SELECT * from users WHERE username = ?", req.query.username, function(err, rows) {
     if (err) {
-      console.err(err);
+      console.log(err);
       return res.status(500).send(err);
     }
     else {
@@ -106,6 +104,29 @@ restapi.post('/register', jsonParser, function(req, res) {
   }
 });
 
+restapi.post('/album', jsonParser, function(req, res) {
+  console.log(req.body);
+  if (req.body.albumname && req.body.userid) {
+    db.run("INSERT INTO albums (name, location, ownerid) VALUES('" + req.body.albumname + "', '" + req.body.location + "', '" + req.body.userid + "')", function(err) {
+      if (err) {
+        return res.status(500).send(err);
+      }
+      else if(this.lastID) {
+        return res.json({
+          success: true,
+          id: this.lastID
+        });
+      }
+      else {
+        return res.status(500).send("Unknown error");
+      }
+    });
+  }
+  else {
+    return res.status(500).send("Album name or Username missing");
+  }
+});
+
 restapi.get('/album', function(req, res) {
   if (req.query.albumid) {
     db.get("SELECT * FROM albums WHERE id = " + req.query.albumid, function(err, row) {
@@ -167,10 +188,34 @@ restapi.get('/pix', function(req, res) {
   });
 });
 
+restapi.post('/pix', function(req, res) {
+  console.log(req.body);
+  // All except caption is optional
+  if (req.body.pix && req.body.albumid && req.body.userid) {
+    db.run("INSERT INTO pix (caption, pixdata, albumid, ownerid) VALUES('" + (req.body.caption || '') + "','" + req.body.pix + "'," + req.body.albumid + "," + req.body.userid + ")", function(err) {
+      if (err) {
+        return res.status(500).send(err);
+      }
+      else if(this.lastID) {
+        return res.json({
+          success: true,
+          id: this.lastID
+        });
+      }
+      else {
+        return res.status(500).send("Unknown error");
+      }
+    });
+  }
+  else {
+    return res.status(500).send("Album, Pix, or User auth missing");
+  }
+});
+
 restapi.post('/data', function(req, res) {
   db.run("UPDATE counts SET value = value + 1 WHERE key = ?", "counter", function(err, row){
     if (err){
-      console.err(err);
+      console.log(err);
       res.status(500);
     }
     else {

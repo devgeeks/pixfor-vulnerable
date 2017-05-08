@@ -95,3 +95,25 @@ i.icon.icon-plus {
 .invisible {
   visibility: hidden;
 }
+
+.pix img {
+  width: 100%;
+}
+
+.pix-grid-item {
+  width: 31%;
+  margin: 2px;
+}
+
+.pix-grid-item img {
+  width: 31%;
+}
+
+/* The next two styles are needed for the cordova-plugin-camera on the browser platform */
+.cordova-camera-capture {
+  position: absolute !important;
+  top:0;
+}
+.cordova-camera-capture button {
+  background: white;
+}
