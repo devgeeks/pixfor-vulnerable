@@ -6,8 +6,8 @@ var myApp = new Framework7({
   animateNavBackIcon: true,
 });
 
-// var server = "http://take.pixfor.me:3000";
-var server = "http://localhost:3000";
+var server = "http://take.pixfor.me:3000";
+// var server = "http://localhost:3000";
 
 // If we need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
@@ -43,6 +43,7 @@ function populateAlbums(albums) {
 }
 
 function loadPixGrid(albumid) {
+  $$('.pix-grid').html('<div class="content-block">Loading thumbnails...</div>');
   $$.ajax({
     method: 'GET',
     url: server + '/pix',
@@ -84,6 +85,7 @@ function fetchUserAlbums(username) {
   console.log(username);
   var albums = [];
 
+  $$('.albums').html('<div class="content-block">Loading albums...</div>');
   $$.ajax({
     method: 'GET',
     url: server + '/albums',
@@ -232,6 +234,7 @@ function addPixToAlbum(albumid, pix, caption) {
 }
 
 function loadPix(albumid, index) {
+  myApp.showPreloader('Fetching images');
   $$.ajax({
     method: 'GET',
     url: server + '/pix',
@@ -243,6 +246,7 @@ function loadPix(albumid, index) {
       var pix = albumPix.map(function(pic) {
         return { url: pic.pixdata, caption: pic.caption };
       });
+      myApp.hidePreloader();
       if (pix.length === 0) {
         myApp.alert("No pix found. Time to add some?", "Empty Album");
       }
