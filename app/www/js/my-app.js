@@ -30,7 +30,7 @@ function populateAlbums(albums) {
     var l = albums.length;
     for (var i = 0; i < l; i++) {
       // This could be ripe for XSS in album.name
-      // e.g.: album.name = '<span onclick="alert('hacked');">My cool album</span>';
+      // e.g.: album.name = '<span onclick=alert("XSS")>Album name<span>';
       $$('.albums ul').append('<li><a href="album.html?albumid=' +
         albums[i].id + '" data-album="' + albums[i].id +
         '" class="album-link item-link item-content">' +
@@ -63,7 +63,10 @@ function loadPixGrid(albumid) {
       else {
         var colCount = 0;
         pix.forEach(function(pic, index) {
-          $$('.pix-grid').append('<a class="pix-grid-item" href="#"><img data-img-id="' + index + '" alt="' + pic.caption + '" src="' + pic.url + '" /></a>');
+          $$('.pix-grid').append(
+            '<a class="pix-grid-item" href="#"><img data-img-id="' +
+            index + '" alt="' + pic.caption + '" src="' + pic.url + '" /></a>'
+          );
         });
         $$('.pix-grid-item').on('click', function(e) {
           var index = $$(e.target).attr('data-img-id');
