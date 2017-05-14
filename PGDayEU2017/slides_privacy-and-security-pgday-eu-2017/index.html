@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Privacy and Security for PhoneGap developers: Slides</title>
+		<meta name="description" content="Slides">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-asul theme-color-black-orange">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="89c6657488c97219b5052083f42cf9af"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 277px; height: auto;" data-block-id="278560d0255655ec6f0b8093b34ae485"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="border-width: 1px; z-index: 11; color: rgb(255, 153, 0);">
+<h1>Privacy and Security</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="5fd578afaffaa84653fc9e9272d55048" style="min-width: 30px; min-height: 30px; width: 660px; height: 123px; left: 150px; top: 70px;"><div class="sl-block-style" style="z-index: 12; opacity: 0.5;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1000" data-natural-height="186" data-src="privacy-and-security-pgday-eu-2017/7e0499c3fa1fa6249e514077fae219f0.png"></div></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="656c68ee6a5ddd558d900893c3255bd6" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 31px;"><div class="sl-block-style" style="z-index: 13; opacity: 0.5;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 255, 255);">
+<p>PhoneGap Day EU - 2017</p>
+</div></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="8a557e1443c0c6f36c6dcacb21548233" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 381px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>for PhoneGap developers</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="daa6f48b135ded009669d1f67c833136" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 597px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>WORK IN PROGRESS...</p>
+</div></div></section><section data-id="ae29f2b53d7d30cdb3cce373e077f092"><div class="sl-block" data-block-type="text" style="width: 384px; left: 80px; top: 105px; height: auto;" data-block-id="b3ac0ade2c9808c3bd83c303bbd1b3bf"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11; color: rgb(255, 153, 0);">
+<h1>Privacy</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 384px; left: 496px; top: 105px; height: auto;" data-block-id="493633e49c680b631020a95bc9f6aa70"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 12; color: rgb(255, 153, 0);">
+<h1 style="text-align: right;">Security</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="9f464daa0e013144702c0cd816ae2d76" style="min-width: 30px; min-height: 30px; width: 491px; height: 336px; left: 469px; top: 252px;"><a class="sl-block-content" style="z-index: 13; border-style: solid; border-width: 18px;" href="https://www.youtube.com/watch?v=Of7uEqiSP6Y" target="_blank"><img style="" data-natural-width="570" data-natural-height="390" data-src="privacy-and-security-pgday-eu-2017/735646819d94e7a624a3c4a7363865cb.png"></a></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 464px; height: 336px; left: 1px; top: 252px;" data-block-id="ba0ca5160420926298048ead96da5599"><a class="sl-block-content" style="z-index: 14; border-style: solid; border-width: 18px;" href="https://www.youtube.com/watch?v=Of7uEqiSP6Y" target="_blank"><img style="" data-natural-width="569" data-natural-height="412" data-src="privacy-and-security-pgday-eu-2017/22ddf21dcdfd448f19728025b6924243.png"></a></div>
+<div class="sl-block" data-block-type="text" data-block-id="76bcc8ffb543046b30498f7d7760a979" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 117px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<h2>vs.</h2>
+</div></div></section><section data-id="f1e7784ea75630bf62a9e14ed9d23655"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 70px; height: auto;" data-block-id="c8ddab9990d67076249c8fb1317cc821"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11; color: rgb(255, 255, 255);">
+<h2>What is their relationship?</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 350px; height: auto;" data-block-id="e05b349cf935e554e15a7303a1792e13"><div class="sl-block-style" style="z-index: 12;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>
+	<h3><span class="s2">One does not always guarantee the other</span></h3>
+	</li>
+	<li>
+	<h3><span class="s2">Security doesn't always keep data private</span></h3>
+	</li>
+	<li>
+	<h3><span class="s2">Privacy is also a security issue</span></h3>
+
+	<ul>
+		<li>
+		<h3><span class="s2">attack vectors, etc</span></h3>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="53aa1559967e9dc3bc9fbfc01cb75f7e" style="height: auto; min-width: 30px; min-height: 30px; width: 720px; left: 123px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 153, 0);">
+<h3>
+<span class="s1">Security and Privacy go Hand in Hand </span><span class="s2">👬</span>
+</h3>
+</div></div></section><section data-id="ed926089ed46a5a1659d70d6b8e05c97"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="5d58ff6ad2bd35c88476068df414eeb4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 255, 255);">
+<h2>Strong Privacy Needs Security</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 280px; height: auto;" data-block-id="5c63355f71eb541143c888196d54299f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; color: rgb(255, 153, 0);">
+<h3>Without good security, Privacy cannot be protected from those with malicious intent</h3>
+</div></div></section><section data-id="ff01e5a29e75492c604fe1f6bdad690d"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="bc840e836cb0a1496e634d44f727fb22"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; color: rgb(255, 153, 0);">
+<h1>“Hack Yourself First”*</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3c5a76521e587920240d28c509377a8d" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3>Better you than someone else...</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="6235da5810141c14a36e4605b494c4a4" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 521px;"><div class="sl-block-style" style="z-index: 13;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 255, 255);">
+<p><a href="https://www.troyhunt.com/2013/05/hack-yourself-first-how-to-go-on.html" target="_blank">* Concept blatantly stolen from Troy Hunt</a></p>
+</div></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="9a83ff9d4e807b538f3f4facbcc8549c" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 591px;"><div class="sl-block-style" style="z-index: 14; opacity: 0.5;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 66%;">
+<p>Fun resource: http://hackyourselffirst.troyhunt.com</p>
+</div></div></div></section><section data-id="ed82f811228a855f8fbade8d33f4f2f2"><div class="sl-block" data-block-type="text" style="width: 806px; left: 79px; top: 70px; height: auto;" data-block-id="c428142ccf6de11c9e158da4c6f46fab"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h3>What Kinds of Attacks might be Mounted Against a PhoneGap app?</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 280px; height: auto;" data-block-id="cc2e02be0e21c389be428e7b280a8fc9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 85%;">
+<ul>
+	<li>
+	<h3>Direct API or Server Access</h3>
+	</li>
+	<li>
+	<h3>Cross Site Scripting (XSS)</h3>
+	</li>
+	<li>
+	<h3>Cross Site Request Forgery (CSRF)</h3>
+	</li>
+	<li>
+	<h3>SQL Injection</h3>
+	</li>
+	<li>
+	<h3>MitM</h3>
+	</li>
+	<li>
+	<h3>Broken Auth and Session Management</h3>
+	</li>
+	<li>
+	<h3>User Exploitation (Phishing, etc)</h3>
+	</li>
+	<li>
+	<h3>Etc…</h3>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="fd75ebf5afbc247665fb9655feb70987" style="height: auto; min-width: 30px; min-height: 30px; width: 803px; left: 79px; top: 180px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 153, 0);">
+<h3>Pretty much the same as those used to attack Browser apps</h3>
+</div></div></section><section data-id="10f69f06a14cd540d05ce00de059538a"><div class="sl-block" data-block-type="text" style="width: 806px; left: 78px; top: 420px; height: auto;" data-block-id="d15f905f3c6f30d6c384b96c47f34603"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; color: rgb(255, 153, 0);">
+<h2>As we say in Australia:</h2>
+
+<h2>"Yeah, Nah"*</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="bea3cfe60d5108abbe51165d7daf1433" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>Is Hacking Hard?</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3badb2d2dbf2ade7836bc95963ef1c9d" style="height: auto; min-width: 30px; min-height: 30px; width: 745px; left: 108px; top: 185px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 255, 255);">
+<h3>Does it take "mad skillz"?</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="1861689d23f39b0bfac95e5840def698" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 591px;"><div class="sl-block-style" style="z-index: 14; opacity: 0.5;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>* Sadly and confusingly, that means “No”</p>
+</div></div></div></section><section data-id="011d5ef5068e8fa77f6a586ae5f3453e"><div class="sl-block" data-block-type="image" data-block-id="ef2dccdb9950244cac77281d74ed6092" style="min-width: 30px; min-height: 30px; width: 457px; height: 596px; left: 252px; top: 52px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="613" data-natural-height="800" data-src="privacy-and-security-pgday-eu-2017/e1fc9cad70ffc1f354d4ef6d317c2e4b.png"></div></div></section><section data-id="1bcdea715663cc03292091e6ee133227"><div class="sl-block" data-block-type="image" data-block-id="447156ba509b90e81bb311327896b22d" style="min-width: 30px; min-height: 30px; width: 393px; height: 700px; left: 0px; top: 0px;"><div class="sl-block-style" style="z-index: 11; transform: rotate(360deg);"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="478" data-natural-height="852" data-src="privacy-and-security-pgday-eu-2017/b9c7c96db612dc8993303d1ca971e078.png"></div></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="cbf79ef87d0cc9dfa4cff6f47b7ecf89" style="height: auto; min-width: 30px; min-height: 30px; width: 560px; left: 400px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h1>Google Dorks</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="37b31bb71da1eaa59ffb884fd458db23" style="height: auto; min-width: 30px; min-height: 30px; width: 560px; left: 400px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 153, 0);">
+<p>Who are you calling a dork…<br>
+ya dork?</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="20954a68f2f15a11556c24968f2aa0c6" style="height: auto; min-width: 30px; min-height: 30px; width: 530px; left: 415px; top: 552px;"><div class="sl-block-style" style="z-index: 14;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>Not going to bother demoing this, you get the idea</p>
+</div></div></div></section><section data-id="d525092a5ce04839c012fb4a9ff75783"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="c4fae2582cc718a56df3beefdb6fc916"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Plenty of hacking tools</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 286px; height: auto;" data-block-id="d7e7df11769c33b293f0c9d3e2467bd2"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; color: rgb(255, 153, 0);">
+<h2>Don’t require advanced knowledge</h2>
+</div></div></section><section data-id="3265deaf49af3454607f4b3d0718a620"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 280px; height: auto;" data-block-id="5f3a58ac2d5257d4df0221be723c5ed6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; color: rgb(255, 153, 0);">
+<h1>Pixfor</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="61b3f0346ac00b7db0f40e2ac7aac1e8"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12;">
+<h2>OK, So what are we going to hack on today?</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="48f1829b94beeb321e427c84b144e842" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 381px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>...the vulnerable edition</p>
+</div></div></section><section data-id="516e7453bd5ce8da775987287e5df840"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="c30a61848311887cdf3d77aa7896c4fd"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>Running the app</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 154px; height: auto;" data-block-id="7656ec4e653d2049fa9ccd60c6563948"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 91%;">
+<ul>
+	<li style="text-align:left">
+	<h3>$ git clone https://github.com/devgeeks/pgdayeu-pixfor</h3>
+	</li>
+	<li style="text-align:left">
+	<h3>$ cd pixfor-vulnerable/app</h3>
+	</li>
+	<li style="text-align:left">
+	<h3>$ phonegap serve (and use the PhoneGap Developer App), or</h3>
+	</li>
+	<li style="text-align:left">
+	<h3>$ phonegap run [ios|android] [--device]</h3>
+	</li>
+</ul>
+
+<h3 style="text-align: left;">~ or ~</h3>
+
+<ul>
+	<li style="text-align:left">
+	<h3>Open the PhoneGap Developer App and point it at: <a href="http://take.pixfor.me:8888" target="_blank">http://take.pixfor.me:8888</a>
+</h3>
+	</li>
+	<li style="text-align:left">
+	<h3>Source on the USB sticks the assistants have…</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="0d8c3defdc33081511da7ce3d5a29356"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 302px; height: auto;" data-block-id="a2dfdec68eb8f39e8f9a8c5a78d366fb"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0); font-size: 150%;">
+<h1>‘ OR 1=1; -- </h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="9612025e9c463596ef8585f2946da3c7"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<h1>SQL Injection</h1>
+</div></div></section><section data-id="af575b23edb1a0949ff71e4a97df8652"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 383px; height: auto;" data-block-id="4335eb46713a65ac856fc67c8708bb8a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Little Bobby Tables</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 710px; height: 334px; left: 125px; top: 70px;" data-block-id="3aa71503cdd99888c93f1aca208ef2ee"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="688" data-natural-height="324" data-src="privacy-and-security-pgday-eu-2017/0a0caa61c40d20c96d8019f2aaaded38.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="e239e12c913fc32209ea29bb17390146" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 463px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 153, 0);">
+<h1>Robert’; DROP TABLE Students; --</h1>
+</div></div></section><section data-id="32cc7e153ec5b06fb76647a748daf599"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 207px; height: auto;" data-block-id="b6a39c267527c6d98bcd54f23018b109"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0); font-size: 150%;">
+<h1>Let's try it...</h1>
+</div></div></section><section data-id="67c756c2390b6c575ed6ca93fc66a118"><div class="sl-block" data-block-type="text" style="width: 806px; left: 78px; top: 302px; height: auto;" data-block-id="c236546a63884bf6dc3c65b7b743201d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>What Can We Do?</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 78px; top: 206px; height: auto;" data-block-id="d059a30b82703af340260aad1a1a0541"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; color: rgb(255, 153, 0);">
+<h2>SQL Injection</h2>
+</div></div></section><section data-id="17f1213e8fcf7c385a5bf2e468bb17a6"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="9fac09922650183057b1a50d0677fe7d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>If nothing else...</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 154px; height: auto;" data-block-id="aadb26b50694a1de307e7f8c7d5468b5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>
+	<h3><span class="s2">Avoid SQL injection by use of parameterisation</span></h3>
+
+	<ul>
+		<li>
+		<h3><span class="s2">This keeps untrusted input from breaking out of the parameter context</span></h3>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<h3><span class="s2">And of course, listen to Bobby’s mom and sanitise your inputs</span></h3>
+	</li>
+</ul>
+</div></div></section><section data-id="a5599eaae86810607e27f61e28032375"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 181px; height: auto;" data-block-id="aa16ff31a9b65db98995c7f777240a44"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; color: rgb(255, 255, 255); font-size: 150%;">
+<h1>XSS</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d064b0f1ffffe0439657567725bc9d47" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(255, 153, 0);">
+<h2>Cross Site Scripting</h2>
+</div></div></section><section data-id="ef28f90918e550585f4fa04a96921ded"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="0c673880c13b1d5de5e97f392fcb81bc"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Is XSS that big of a deal?</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 325px; height: auto;" data-block-id="e7f2727b1f9fad132ea56be4dd1997a3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12;">
+<h3><a href="https://www.seancassidy.me/lostpass.html" target="_blank">https://www.seancassidy.me/lostpass.html</a></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="69160280d4785362cf4e2ccad9a549e4" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 420px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 200%;">
+<h1>ಠ_ಠ</h1>
+</div></div></section><section data-id="e6a9bed0b3b9c20c189ee2a1b1aab3a9"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 210px; height: auto;" data-block-id="01dc8e1cbca5bdd8836a7fb28d5059e7"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h1>Two Primary concerns</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 307px; height: auto;" data-block-id="cca345b408a3117c1a83de8f9fa34be8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<ul>
+	<li>
+	<h3><span class="s2">What are the sources of input?</span></h3>
+	</li>
+	<li>
+	<h3><span class="s2">Where is this data going (the target)?</span></h3>
+	</li>
+</ul>
+</div></div></section><section data-id="3f32800a49f235a0eaed31992ec2b1c8"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="3e6d59c77accefc0e6d041a80efde3da"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h1>Sources</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 177px; height: auto;" data-block-id="1a94aea3c964ec700f4f798ebd9e335b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<ul>
+	<li>
+	<h3 style="text-align: left;">Location and URL Sources</h3>
+	</li>
+	<li>
+	<h3 style="text-align: left;">Cookies</h3>
+	</li>
+	<li>
+	<h3 style="text-align: left;">Referrer (less so in a PhoneGap app)</h3>
+	</li>
+	<li>
+	<h3 style="text-align: left;">Window Name</h3>
+	</li>
+	<li>
+	<h3 style="text-align: left;">Indirect Sources (Client side db such as sqlite/pouch/etc)</h3>
+	</li>
+	<li>
+	<h3 style="text-align: left;">Other Objects (Post Message/Intents/etc)</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="f0ba0fb306539839833a07a71341b6ad"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="b5dc34c7ffae435455d6a65d51a7b9aa"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h1>Targets</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 177px; height: auto;" data-block-id="f749b0c7d025589d69f5a69c15d8ea23"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<ul>
+	<li>
+	<h3 style="text-align: left;">Execution Target</h3>
+	</li>
+	<li>
+	<h3 style="text-align: left;">HTML Element Target</h3>
+	</li>
+	<li>
+	<h3 style="text-align: left;">Set Location Target</h3>
+	</li>
+	<li>
+	<h3 style="text-align: left;">Control Flow Target</h3>
+	</li>
+	<li>
+	<h3 style="text-align: left;">…and more</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="252b6d674a7ce9619a0edc63ac7432cd"><div class="sl-block" data-block-type="text" style="width: 432px; left: 48px; top: 210px; height: auto;" data-block-id="9b6a4829b97d21c44d260213e0249972"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 11;">
+<ul>
+	<li>
+	<h3>eval()</h3>
+	</li>
+	<li>
+	<h3>onclick, onsubmit, …</h3>
+	</li>
+	<li>
+	<h3>Function()</h3>
+	</li>
+	<li>
+	<h3>script.src</h3>
+	</li>
+	<li>
+	<h3>setTimeout()</h3>
+	</li>
+	<li>
+	<h3>script.text</h3>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 384px; left: 528px; top: 210px; height: auto;" data-block-id="de2a8179a36a06e9d128dab34b6e67ad"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 12;">
+<ul>
+	<li>
+	<h3>setInterval()</h3>
+	</li>
+	<li>
+	<h3>script.textContent</h3>
+	</li>
+	<li>
+	<h3>setImmediate()</h3>
+	</li>
+	<li>
+	<h3>script.innerText</h3>
+	</li>
+	<li>
+	<h3>etc…</h3>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="c07ae2e0eb7cca0aa310089539b95700" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 153, 0);">
+<h1>Execution Target</h1>
+</div></div></section><section data-id="ca24a103532f52f0075a50be3669da05"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="720d12d8dc0d300c1c25617213270a88"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>HTML Element Target</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 154px; height: auto;" data-block-id="2c1ca1ccb1b989de8eedd7ba4ce361d6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<ul>
+	<li>
+	<h3>document.write</h3>
+	</li>
+	<li>
+	<h3>document.writeln</h3>
+	</li>
+	<li>
+	<h3>element.innerHTML</h3>
+	</li>
+	<li>
+	<h3>element.insertAdjacentHTML</h3>
+	</li>
+	<li>
+	<h3>Range.createContextualFragment</h3>
+	</li>
+	<li>
+	<h3>HTMLButton.value</h3>
+	</li>
+	<li>
+	<h3>.append()    <em><span style="font-size:0.7em">(jQuery and friends)</span></em>
+</h3>
+	</li>
+	<li>
+	<h3>etc...</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="e12c9a2fc2751ba5ec6122cb2dfcb346"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="72e7624305db309624f9593099bdae8a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>Set Location Target</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 154px; height: auto;" data-block-id="0e9e6563a3bdc0ba8d0d25b365c788b5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<ul>
+	<li>
+	<h3>window.location</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="909ff9d562cee2eac89b30a1d4efbe1d"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="c89735d2e9f4f25fdde2fdb5155b7fbb"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>Control Flow Target</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 154px; height: auto;" data-block-id="f4cd4c1168a24f12e306ef3c8f834154"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
+<ul>
+	<li>
+	<h3>this[foo](bar)</h3>
+
+	<ul>
+		<li>
+		<h3>seems contrived, but allows arbitrary script execution if input `foo` is untrusted</h3>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="f88ae949e0824bd0f1d5ce03dedf6bae"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 66px; height: auto;" data-block-id="740184caa2c6c2356ab313e91cef717d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>A Quick Note About</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 74px; top: 140px; height: auto;" data-block-id="49a71bab3f48d89401f56831792455d1"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; font-size: 139%; color: rgb(255, 153, 0);">
+<h1>Frameworks</h1>
+</div></div></section><section data-id="91228175f806ce2595104e3285af12c1"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="6bf35afa1d942d51c0e144a184c6a218"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>Problems With Frameworks</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 154px; height: auto;" data-block-id="0e6dc582e5f4b7e35276cce83fca0d98"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 255, 255);" dir="ui">
+<ul>
+	<li>
+	<h3 style="text-align:left">Add complexity</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">Abstract away targets (innerHTML, etc)</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">Add syntactic sugar</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">Add loopholes to browser security controls</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">The frameworks and practices you use should (attempt to) be secure by default</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">If your frameworks add syntactic sugar, be aware of the implications</h3>
+	</li>
+</ul>
+
+<p> </p>
+</div></div></section><section data-id="26c2c120fcbab10bdc164bd9293127c1"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="c22831624e4b50972186329eff1506ac"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>jQuery</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 154px; height: auto;" data-block-id="7fa616d07af776b6b4ef5b8db601612d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>
+	<h3>jQuery is practically a target in and of itself (mostly fixed)</h3>
+
+	<ul>
+		<li>
+		<h3>be aware that old versions might be targets</h3>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<h3>Full of HTML element targets:</h3>
+
+	<ul>
+		<li>
+		<pre>$(el).add(userContent)</pre>
+		</li>
+		<li>
+		<pre style="color:rgb(255, 255, 255)">$(el).append(userContent)</pre>
+		</li>
+		<li>
+		<pre style="color:rgb(255, 255, 255)">$(el).after(userContent)</pre>
+		</li>
+		<li>
+		<pre style="color:rgb(255, 255, 255)">$(el).html(userContent), etc…</pre>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="ee2bc94e3399971aa8ea896039842946"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="cdfbe89c5f281e94418aa00319de1913"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>Angular</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 154px; height: auto;" data-block-id="f003eb7176b3d87d6d1e985580573c20"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 255, 255);">
+<ul>
+	<li>
+	<h3><span class="s2">Old versions should be avoided and updated</span></h3>
+
+	<ul>
+		<li>
+		<pre><span class="s4">1.1.5?</span>
+<span style="font-size:0.9em"><span class="s2">&lt;div class=“ng-app"&gt;
+  {{constructor.constructor('alert(1)')()}}
+&lt;/div&gt;</span></span></pre>
+		</li>
+		<li>
+		<h3><span class="s2">Fixed now, but beware older versions</span></h3>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="70e868c4887b683bfa65d9fccea9fcd6"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="64b9b74e5500ba6da5b126d0f70e815a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>React</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 154px; height: auto;" data-block-id="8f8e2415509167a797d6550ff3c32907"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 255, 255);" dir="ui">
+<ul>
+	<li>
+	<h3 style="text-align:left">Gives a clue in the function name:</h3>
+
+	<ul>
+		<li>
+		<pre style="text-align: left;">dangerouslySetInnerHTML()</pre>
+		</li>
+		<li>
+		<h3 style="text-align:left">but devs still use it (static site generators, etc)</h3>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<h3 style="text-align:left">Not using it also doesn’t alleviate the need to sanitise your inputs</h3>
+	</li>
+</ul>
+
+<p> </p>
+</div></div></section><section data-id="0e20fdc74a920b11b3ef9366d7ef5883"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="4f09f25a471aaea349ae864a91ba7b84"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>Stay 👏 Up 👏 To 👏 Date 👏</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 154px; height: auto;" data-block-id="c95f1bbcfe2fb98d05d9e60d0aebf25f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 255, 255);" dir="ui">
+<h3>This applies to PhoneGap/Cordova and its plugins as much as your front-end JavaScript frameworks</h3>
+
+<p> </p>
+</div></div></section><section data-id="741083502d28fe90cd4a11f8e7dd12f7"><div class="sl-block" data-block-type="text" style="width: 806px; left: 79px; top: 302px; height: auto;" data-block-id="2a77e9a957a3b8140278e3b2e84b8ec5"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>What Can We Do?</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 79px; top: 206px; height: auto;" data-block-id="4f3ee0e45fb2c90ee68b1c4e2fa831ca"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12; color: rgb(255, 153, 0);">
+<h2>Cross Site Scripting (XSS)</h2>
+</div></div></section><section data-id="c3b3daccbb17f9beb74b6f35635efa7f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="700d2343107662f8c70335f72342fda4"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11; color: rgb(255, 153, 0);">
+<h2>Minimise Attack Surface</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 154px; height: auto;" data-block-id="3b928fdea1e1e38e44b6d2bb4928027d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(255, 255, 255);" dir="ui">
+<ul>
+	<li>
+	<h3 style="text-align:left">Avoid converting strings to scripts</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">Avoid innerHTML wherever possible!</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">Don't write your own HTML sanitiser (srsly)</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">Whitelist*</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">Content Security Policy (CSP)*</h3>
+	</li>
+</ul>
+
+<h3 style="text-align:left"> </h3>
+
+<h3 style="text-align:left">      * we’ll get to these in a bit</h3>
+</div></div></section><section data-id="d4a05873c6a079b53c005d5b344c398b"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="c9491304cd72f0b590414951b43a1fa0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>Avoid Converting Strings To Scripts</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 224px; height: auto;" data-block-id="17d1a2e64084d160a6ab5e6f9303a9cf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 255, 255);" dir="ui">
+<ul>
+	<li>
+	<h3 style="text-align:left">​​eval, Function.apply, setTimeout("string")</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">inline event handlers</h3>
+
+	<ul>
+		<li>
+		<h3 style="text-align:left">onclick="string"</h3>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<h3>etc</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="40465c3df1031414fcb9f4d7ea2013ff"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="c1adf6976bde787144fc8c63e69d1c3f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>Avoid innerHTML Wherever Possible</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 224px; height: auto;" data-block-id="c1884eeed13afa980f37fe3d3bd81c0c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 255, 255);" dir="ui">
+<ul>
+	<li>
+	<h3 style="text-align:left">.textContent</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">$(el).text()</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">document.createElement/setAttribute</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">Use a template system with escaping</h3>
+
+	<ul>
+		<li>
+		<h3 style="text-align:left">HOWEVER!! location targets are not as protected i.e.:</h3>
+
+		<ul>
+			<li>
+			<pre style="text-align: left;">&lt;a href="{{value}}"&gt;...&lt;/a&gt;</pre>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="675d5459cf4e08f60f5820075784bbac"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="3796cc54d3c361f213676a16e18865d0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>Try Not To Write Your Own HTML Sanitiser</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 224px; height: auto;" data-block-id="7990addf1912d688033ccc69ead3b260"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 255, 255);" dir="ui">
+<ul>
+	<li>
+	<h3 style="text-align:left">If you MUST…</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">Whitelist, NOT blacklist</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">fail conservatively</h3>
+
+	<ul>
+		<li>
+		<h3 style="text-align:left">better to fail to display nicely than to be insecure</h3>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<h3 style="text-align:left">instead consider:</h3>
+
+	<ul>
+		<li>
+		<h3 style="text-align:left">DOMPurify, Angular's $sanitize, Bleach.js (for workers?), etc…</h3>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="7b26b5b00843199f4753b2990ef8f72a"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="f782ab946ddeef6a0965ce68e34315c2"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>TL;DR</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 74px; top: 164px; height: auto;" data-block-id="f2d3aaffc66c9d35f5b62a61560edfe0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 255, 255);" dir="ui">
+<ul>
+	<li>
+	<h3>Avoid eval &amp; innerHTML</h3>
+	</li>
+	<li>
+	<h3>Use a template lang* with escaping, but be careful with attributes</h3>
+	</li>
+	<li>
+	<h3>filter HTML input conservatively</h3>
+	</li>
+	<li>
+	<h3>Whitelist / CSP</h3>
+
+	<h3>
+<br>
+	<span style="font-size:0.7em">* A lot of the tempting languages don’t play well with CSP</span>
+</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="c27c52a3414f1773ea005b1f40b581e7"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 207px; height: auto;" data-block-id="c8c37990603ed17f622ac8b63c4959f5"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; color: rgb(255, 153, 0); font-size: 150%;">
+<h1>Let's try it...</h1>
+</div></div></section><section data-id="4cbb334a0c1567d43b2b93bd6ce7fd3e"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="5b94a370d1f39c0d6229b542ec43fe5a"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h1>Next, Maybe Some Fun To Make Sure You Are</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 91px; top: 250px; height: auto;" data-block-id="ab25bff1f828676b16efdef22cdf1a3b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; color: rgb(255, 255, 255); font-size: 310%;">
+<h1>AWAKE</h1>
+</div></div></section><section data-id="9fb05dd43ca2364e72330f07015db4c5"><div class="sl-block" data-block-type="text" data-block-id="56e2e785f10ed2e591db0b773c826617" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 0px; top: 0px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 153, 0);">
+<p style="text-align: left;">Do You Recognise Any Of These?</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d7d77aa512f15f38c41b356489bc250d" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 64px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 66%;">
+<p style="text-align:left"> #SFO FREE WIFI, 13WestMyrtle, 2WIRE012, 5099251212, @Hyatt-WiFi, @yvrairport, ACU, ADBEEmp2014, ADO, ATT2yrd6rC, AccessDenied, Admirals_Club, AdobeCorp, AdobeGuest, Aer_Lingus_WIFI, Amanda's iPhone, AmtrakConnect, AndroidAP, Avatar Hotel, Avcenter, BDLpublic, BELL647, BELL_WIFI, BERNIES CAFE, BWW-PUBLIC, Best Western Park Place, BestBuy, Boingo Hotspot, Boyd's iPhone 6 Plus, Bycen, CAFE ZUPAS, CORTECH_Guest, CSWireless5ghz, Cafe 300, CapNet, CenturyLink1499, Cl-Wireless, CoJPublic, CoxWiFi, D&amp;B_Guest, DIMTER, DIRECT-6bM2020 Series, DVG-N5402SP-212017, Detroit Airport Wi-Fi, DevMountain, DevMountainApt7, Douglas Guest, DrupalCon, ETS, El Mexsal, EmployeeHotspot, Engedi, EuropaCoffeehouse, FairPublic, Fly-Fi, FourSeasons Guest, Frahmbo's iPhone, Free PHX Boingo WiFi, FullCircle, Fusion-IO Guest, Google Starbucks, GoogleGuest, HI Express Richfield, HI Express Richfield , HOME-6CF2, HOME-C4C8, Handlery_San_Francisco, Happy Campers, HarborLink - Buffalo Wild Wings, Hope Alliance, Hyatt, IMEG-GUEST, ITGUEST, Jerk Grill, Joss, Kimpton, KingMaint, LYNDA-GUEST, Learntoprogram, MATHIS, MATHIS2, MH_Network, MMM_WiFi_Guest, MPLS, MiFi4620L Jetpack B472 Secure, MokiGuest, Mothership-guest, NETGEAR-Guest, NETGEAR53, NETGEAR82, NS FCCLA, OMA-Free-WiFi, OPTUSDN368CFC, OceanWiFi Very Hotspot, Ocho, Oscars, PCMC_Ice_Free_Wifi, PDI-Guest, PIGS, PPS, Park City Ice Patron Wifi, PhoneGap, Public, Quality, Quantum, Rain-Guest, Rangle.io WiFi, ReactWeek, Reclaim_EC, Redtail, Rogers, SDC2014, SEATAC-FREE-WIFI, SFUNET-SECURE, SGMC, SIN, SKYHARBOR PUBLIC WLAN, Seabay, Selnate, Shazron's iPhone 5, Shopify Guests, Solid Attendees, SouthwestWiFi, SpencerWireless, SpringOne2GX, Starbucks WiFi, Stratus018222, Streamyx Mobility, T-Mobile Broadband 67, TJR 008, TPCG0, Taco Bell, The Hotel Collection Guest WiFi, Two Jacks Pizza, U Street Cafe Wifi, UConnect, UNITE-295E, Virgin Hotels, WL, WebsterRec, Willowcreek, Wolverine-WiFi, WorkbarGuest, activehit, appigo47, attwifi, attwifibn, bPhone, baker, bycen, cabinsusa, dd-wrt, dlink, doraemon, duece, elive, ethostream, fazidin2, gogoinflight, hhonors, hhonors lobby, hhonors_lobby, hills, houseofnuts, iPhone (2), indiapalace, intermountain_guest, iviejuicebar, jexus, jucienjava, juicenjava, lhm-open, loganwifi, mikes, mywifi, nortel-wlan, qds_office, rangleio Extension, raspberry-pi, reSETguest, rogers, silvermtnsuites6, surveillance vehicle 2, testnet, video2g, wguest, xfinitywifi, zulkefley13@unifi</p>
+</div></div></section><section data-id="a2d84ceafb284bfaf2d38a3eb7415b3f"><div class="sl-block" data-block-type="text" data-block-id="3791fd3be31eb0b0e151b5329d9b86c0" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 70px;"><div class="sl-block-style" style="z-index: 11;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 153, 0);">
+<h2>Your devices are always looking for Wifi they know</h2>
+</div></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="2b71f14806cfb87661d1bb8d858d8eb5" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 220px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 91%;">
+<ul>
+	<li style="text-align: left;">
+	<h3>These are called “Probe Requests”</h3>
+	</li>
+	<li style="text-align: left;">
+	<h3>If the WiFi was unencrypted (no WEP/WPA, etc), then another device could see these probe requests and simply pretend to be that WiFi (i.e.: A WiFi Pineapple, etc)</h3>
+	</li>
+	<li style="text-align: left;">
+	<h3>Most devices would then happily join and start sending traffic through the malicious WiFi spot</h3>
+	</li>
+	<li style="text-align: left;">
+	<h3>Even easier is a “honey pot” like a WiFi called “FREE WIFI”, etc. Everyone likes free WiFi.</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="d03f26c47c438504aae92c2994e757d9">
+<div class="sl-block" data-block-type="text" data-block-id="7ac49cc1cc5272da063569a8c29ed590" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 213px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h2>These are just some of the many ways to become a:</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 391px;" data-block-id="9a11f6c87fed2e7f9f9d64033d7318e3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(255, 153, 0); font-size: 125%;">
+<h1>Man in the Middle</h1>
+
+<h1>(MitM)</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="c5f565d9d785faa3ef534968326648ff" style="min-width: 30px; min-height: 30px; width: 640px; height: 159px; left: 160px; top: 16px;"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="570" data-natural-height="142" style="" data-src="privacy-and-security-pgday-eu-2017/c2db3a3d32dc45c20b09929c2d157a02.png"></div></div></section><section data-id="0c12cb3212abee018f028a59d55468f9"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="d04a71032ee4046545ed562c00734882"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Maybe It's Time For A Quick</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 263px; height: auto;" data-block-id="a2a7db428d68f18f1c3d3c6d33cc68b8"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12; color: rgb(255, 153, 0); font-size: 125%;">
+<h1>Demo</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="fff5d903e7f0969957997313c6e5b3a0" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 521px;"><div class="sl-block-style" style="z-index: 13; opacity: 0.5;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Let me introduce you to mitmproxy...</p>
+</div></div></div></section><section data-id="a844f51e78df0816ddb507b49483f865"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 302px; height: auto;" data-block-id="dc3ea61dd30cef4339c778b5f5d8d6ee"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>What Can We Do?</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 206px; height: auto;" data-block-id="da23555ab28c700420aad87e0df7662e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12; color: rgb(255, 153, 0);" dir="ui">
+<h2>Man in the Middle (MitM)</h2>
+</div></div></section><section data-id="67ffa83bc159680b5cde7da1d53debed"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 560px; height: auto;" data-block-id="6ed15c833d76ae3ccc4e91d9b1375e62"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>All Of Them</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 490px; height: auto;" data-block-id="f7dec52a63e220516cd14d8bcf9de183"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12; color: rgb(255, 153, 0);">
+<h2>Yes...</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="3bc12387dd7902454b52027525116431" style="min-width: 30px; min-height: 30px; width: 512px; height: 384px; left: 224px; top: 75px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="400" data-natural-height="300" data-src="privacy-and-security-pgday-eu-2017/fc15259fbcc30490ff075e8ad923ab19.png"></div></div></section><section data-id="6a881610369c5ba2c35a001bd4b35bbe"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="9785093412ee57e3b13f33bdb1e1204c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; font-size: 160%;">
+<h1>
+<a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a><a href="https://letsencrypt.org" target="_blank">!</a>
+</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d0a41a7f3262f74a5957865738413970" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Too Hard? Too Expensive?</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="07b410268f493d1389a24095351955c5" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 591px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><a href="https://letsencrypt.org" target="_blank">https://letsencrypt.org</a></p>
+</div></div></section><section data-id="b0dddc0ce55a91f2191b3b59d74499e9"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 181px; height: auto;" data-block-id="5b1901354d8e758070a4c529527885b1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; color: rgb(255, 255, 255); font-size: 150%;">
+<h1>CSP</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 350px;" data-block-id="8395cc003ed8f3794b6ec999c3bd16f6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(255, 153, 0);">
+<h2>Content Security Policy</h2>
+</div></div></section><section data-id="1dabe71a330a6a128a106a53985e1836"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 70px; height: auto;" data-block-id="906098c8aa171facc14dedd765c39de1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1><a href="http://cspisawesome.com" target="_blank">CSP Is Awesome!</a></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 74px; top: 173px; height: auto;" data-block-id="893eb26f8bcc82a1f49fdeb0767cfa25"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12;">
+<h2>What is it?</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="78b65723ef670af92f7ac262f83e8b40" style="height: auto; min-width: 30px; min-height: 30px; width: 803px; left: 80px; top: 280px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li>
+	<h3>It’s a whitelist of content sources</h3>
+	</li>
+	<li>
+	<h3>All official PhoneGap and Cordova templates include a CSP</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="38baae8140ab9580387f018dd56c3b50"><div class="sl-block" data-block-type="code" data-block-id="bade2d4c58188846e47a8e1239c56d5d" style="min-width: 30px; min-height: 30px; width: 800px; height: 140px; left: 80px; top: 109px;"><div class="sl-block-content" style="z-index: 11; font-size: 150%;" data-highlight-theme="zenburn"><pre class="xml"><code> &lt;meta http-equiv="Content-Security-Policy"
+   content="default-src * data: gap: 'unsafe-inline';
+     style-src 'self' 'unsafe-inline';
+     media-src *" /&gt;
+</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 800px; height: 279px; left: 80px; top: 300px;" data-block-id="b7ec746103246db5c217d6a2ed58a17e"><div class="sl-block-style" style="z-index: 12; transform: rotate(360deg);"><div class="sl-block-content" style="z-index: 12; font-size: 150%;" data-highlight-theme="zenburn"><pre class="xml"><code>&lt;meta http-equiv="Content-Security-Policy"
+  content="default-src 'self' data: gap:
+      https://ssl.gstatic.com 
+      https://mysite.com;
+    object-src *; 
+    style-src 'self' data: 'unsafe-inline';
+    img-src 'self' data:;
+    media-src 'self' data: https://mysite.com:8888;
+    font-src 'self' data:; connect-src *"&gt;
+</code></pre></div></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3279fb2d3c6169be0268c6cf5242ab62" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 160px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Basic</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d26e12536b2cbcbd70fb3609366f9589" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 261px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>A bit more...</p>
+</div></div></section><section data-id="54160e168ab78a527b63b99ae6999312"><div class="sl-block" data-block-type="text" style="width: 806px; left: 79px; top: 302px; height: auto;" data-block-id="7024e48c3480c11a174eeda3a0c7d744"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>PhoneGap Specific</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 79px; top: 206px; height: auto;" data-block-id="7ac8a414343ce2897b907025c9598dd4"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12; color: rgb(255, 153, 0);">
+<h2>OK. Let's Get More</h2>
+</div></div></section><section data-id="a1409ebf4a8717009c28d5af11247cf7"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 302px; height: auto;" data-block-id="eb466e9b41ec3804ff53d431998467c2"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Cordova Whitelist</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 217px; height: auto;" data-block-id="9c51cd894035372eb7659b7e229532cb"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; color: rgb(255, 153, 0); font-size: 126%;">
+<pre style="text-align: center;"><span style="font-size:1.4em">cordova-plugin-whitelist</span></pre>
+</div></div></section><section data-id="da5ca8caf5b798fa079e38ca15b3a7db"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 70px;" data-block-id="a835c4e6c126294361a1a75cf31f48d2"><div class="sl-block-style" style="z-index: 11;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 153, 0);">
+<h2>Read And Understand The <a href="http://cordova.apache.org/docs/en/latest/guide/appdev/whitelist/index.html" target="_blank">Whitelist Guide</a>
+</h2>
+</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 218px;" data-block-id="6f1ebd6c0ce64f2818811ba208a286ed"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 91%;" dir="ui">
+<ul>
+	<li style="text-align:left">
+	<pre><span style="font-size:1.0em">&lt;access origin=“https://*.mydomain.com" /&gt;</span></pre>
+	</li>
+	<li style="text-align:left">
+	<h3>On iOS:</h3>
+
+	<ul>
+		<li style="text-align:left">
+		<h3>Application Transport Security (ATS)</h3>
+		</li>
+		<li style="text-align:left">
+		<pre>&lt;access origin="https://*.mydomain.com" minimum-tls-version="TLSv1.1" requires-forward-secrecy="false" /&gt;</pre>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="4adeec0d21f705fb4e503c15d9b7c7fe"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 267px; height: auto;" data-block-id="224d47dcd81263ba07836ed879ba8587"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; font-size: 171%;">
+<h1>iFrames</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 217px; height: auto;" data-block-id="12fe441db49da66daf58683ed4c8d618"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12; color: rgb(255, 153, 0); font-size: 126%;">
+<h3 style="text-align: center;"><span style="font-size:1.0em">The Problem With</span></h3>
+</div></div></section><section data-id="b09c605fb3210ec441b1a602afd3db7a"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 70px;" data-block-id="95440bd1bc55b02cb0f19f4efff4d753"><div class="sl-block-style" style="z-index: 11;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 153, 0);">
+<h2>Access To "The Bridge"</h2>
+</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 154px;" data-block-id="5c2e51c1e85f546fdce62d7f16442aa4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 91%;" dir="ui">
+<ul>
+	<li style="text-align:left">
+	<h3>If content is served in an iframe from a whitelisted domain, that domain will have access to the native Cordova bridge</h3>
+	</li>
+	<li style="text-align:left">
+	<h3>This means that if you whitelist a third-party advertising network and serve those ads through an iframe, it is possible that a malicious ad will be able to break out of the iframe and perform malicious actions</h3>
+	</li>
+	<li style="text-align:left">
+	<h3>Be careful what you whitelist!</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="e522cd4cf56844b88b3b6d25526cf49b"><div class="sl-block" data-block-type="text" style="width: 806px; left: 79px; top: 302px; height: auto;" data-block-id="706d763d1c7e6827c101148d23de9092"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Certificate Pinning</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 79px; top: 206px; height: auto;" data-block-id="8a88e4e98d94b49dfa4d0a3b824c0801"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 12; color: rgb(255, 153, 0);">
+<h2>Getting Advanced With</h2>
+</div></div></section><section data-id="3d80c980c75210828b9e5e8e60603cb9"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 70px; height: auto;" data-block-id="190c46cc1f503c7447b711d71d65904e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; color: rgb(255, 153, 0);">
+<h2>(Limited) Options For Pinning</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="5f13427f119c4f974a07cb2fa854048b" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 180px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>
+	<h3 style="text-align:left">Cordova does not support true certificate pinning</h3>
+	</li>
+	<li>
+	<h3 style="text-align:left">There are ways to approximate certificate pinning</h3>
+
+	<ul>
+		<li>
+		<h3 style="text-align:left">T.O.F.U. <em><span style="font-size:0.9em">(yum)</span></em>
+</h3>
+		</li>
+		<li>
+		<h3 style="text-align:left"><a href="https://github.com/EddyVerbruggen/SSLCertificateChecker-PhoneGap-Plugin" target="_blank">EddyVerbruggen/SSLCertificateChecker-PhoneGap-Plugin</a></h3>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<h3 style="text-align:left">True certificate pinning for some platforms</h3>
+
+	<ul>
+		<li>
+		<h3 style="text-align:left"><a href="https://github.com/wymsee/cordova-HTTP" target="_blank">wymsee/cordova-HTTP</a></h3>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="cc629549cb137705126cbcfd42c7cdd2"><div class="sl-block" data-block-type="text" data-block-id="283e54094f579e57c335f6efad2dc290" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; color: rgb(255, 153, 0);">
+<h2>Some More Advice <a href="https://cordova.apache.org/docs/en/latest/guide/appdev/security/" target="_blank"><span style="font-size:0.5em">From The Security Guide</span></a>
+</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="0ac229bcdb98364b47936d0904df9ff9" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 161px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li style="text-align:left">
+	<h3>Do not use Android Gingerbread (2.3)!</h3>
+	</li>
+	<li style="text-align:left">
+	<h3>Use InAppBrowser for outside links</h3>
+	</li>
+	<li style="text-align:left">
+	<h3>Validate all user input (worth repeating)</h3>
+	</li>
+	<li style="text-align:left">
+	<h3>Do not cache sensitive data</h3>
+	</li>
+	<li style="text-align:left">
+	<h3>Don't use eval() unless you know what you're doing</h3>
+	</li>
+	<li style="text-align:left">
+	<h3>Do not assume that your source code is secure</h3>
+	</li>
+</ul>
+</div></div></section><section data-id="7a44e50b66bf9b3e03b3515ab0c7cbc0"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 66px;" data-block-id="6eb972ccd8491ac67f976681d343069e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; color: rgb(255, 153, 0);">
+<h2>Resources</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 80px; top: 161px;" data-block-id="13f53ea4e3f28f0d0b504d6d4e062bd2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 84%;">
+<ul>
+	<li style="text-align:left">OWASP Top 10
+	<ul>
+		<li style="text-align:left"><a href="http://www.veracode.com/directory/owasp-top-10" target="_blank">http://www.veracode.com/directory/owasp-top-10</a></li>
+	</ul>
+	</li>
+	<li style="text-align:left">SQL Injection Myths and Fallacies
+	<ul>
+		<li style="text-align:left"><a href="http://www.slideshare.net/billkarwin/sql-injection-myths-and-fallacies" target="_blank">http://www.slideshare.net/billkarwin/sql-injection-myths-and-fallacies</a></li>
+	</ul>
+	</li>
+	<li style="text-align:left">PhoneGap Platform Security wiki
+	<ul>
+		<li style="text-align:left"><a href="https://github.com/phonegap/phonegap/wiki/Platform-Security" target="_blank">https://github.com/phonegap/phonegap/wiki/Platform-Security</a></li>
+	</ul>
+	</li>
+	<li style="text-align:left">Online Security Confs
+	<ul>
+		<li style="text-align:left"><a href="http://www.tunnelsup.com/online-security-conferences" target="_blank">http://www.tunnelsup.com/online-security-conferences</a></li>
+	</ul>
+	</li>
+	<li style="text-align:left">XSS (Cross Site Scripting) Prevention Cheat Sheet
+	<ul>
+		<li style="text-align:left"><a href="https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet" target="_blank">https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet</a></li>
+	</ul>
+	</li>
+	<li style="text-align:left">HTML4 Security Cheat Sheet
+	<ul>
+		<li style="text-align:left"><a href="https://html5sec.org/" target="_blank">https://html5sec.org/</a></li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="614b3f40306d920e0096923c5ae2519c"><div class="sl-block" data-block-type="text" data-block-id="0862b8ebd31a1ff17dd4fbdcf7954109" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 350px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>
+	<p><a href="http://www.twitter.com/theRealDevgeeks" target="_blank"><span class="s4">@theRealDevgeeks</span></a></p>
+	</li>
+	<li>
+	<p><span class="s5"><a href="https://github.com/devgeeks" target="_blank"><span class="s6">https://github.com/devgeeks</span></a></span></p>
+	</li>
+	<li>
+	<p><span class="s3"><a href="http://blog.devgeeks.org" target="_blank"><span class="s4">http://blog.devgeeks.org</span></a></span></p>
+	</li>
+	<li>
+	<p><span class="s3"><a href="mailto:tommy@devgeeks.org?subject=" target="_top"><span class="s4">tommy@devgeeks.org</span></a></span></p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3c8d3179ce8db14e8010d7211bac1431" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Tommy-Carlos Williams</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="a9d94dd662b6a65ed97cf3a2d6ac9e0d" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(255, 153, 0);">
+<h1>Thanks!</h1>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":998817,"slug":"privacy-and-security-pgday-eu-2017","title":"Privacy and Security for PhoneGap developers","description":"","width":960,"height":700,"visibility":"all","published_at":"2017-05-09T05:17:23.878Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/d0c27070455732ee85cfdb43d613a303/thumb.jpg","view_count":5,"user":{"id":6349,"username":"devgeeks","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/7878fda12a95c5430305f959277150f8?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":637,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true}},"background_transition":"zoom","transition":"fade","theme_id":null,"theme_font":"asul","theme_color":"black-orange","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":false,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":true,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1494760022438,"font_typekit":null,"font_google":null,"notes":{"ae29f2b53d7d30cdb3cce373e077f092":"She may be secure in there, but if she soils herself, everyone will be able to see it.\n\nSecure, yes. Private, no.\n\nThe other is a house completely enclosed in a giant curtain. Have they wet the bed today? No idea. \n\nBut if there was a bear outside, that curtain wouldn’t offer much.\n\nPrivate, yes. Secure, no.","ed82f811228a855f8fbade8d33f4f2f2":"HOWEVER, keys to the kingdom on mobile.\n\nAttacker can have even greater access by hacking a PhoneGap / Cordova app due to plugins / bridge.\n\nSensors, Contacts, Location, etc","ff01e5a29e75492c604fe1f6bdad690d":"This is the crux of this workshop!\n\nOff you take away nothing else, let it be this.\n\nFind the problems before the bad guys do.","ed926089ed46a5a1659d70d6b8e05c97":"e.g.: the bear outside the curtained house. Or more realistically, a criminal.\n\nSecurity has three main “levels” of threat\n\nScript kiddie, etc,\nActual criminals,\nGovernments (rogue or otherwise), and big big business (industrial sabotage)","f1e7784ea75630bf62a9e14ed9d23655":"Secure apps that ask for too much unnecessary information from users expose that data to the app creator and possibly others\n\nPrivate information being leaked can lead to social engineering, identity theft, and attack vectors against other apps, etc","1bcdea715663cc03292091e6ee133227":"At its heart, just a carefully crafted search.\n\nI have seen this come back with 5-10k results (maybe better query than mine).\n\nStill…\n\nAll it takes is a google query to get database passwords, etc…","10f69f06a14cd540d05ce00de059538a":"“No one would bother to hack my little app”…\n\nAs Troy Hunt often jokes, most \"hackers\" turn up to court with their mums.","011d5ef5068e8fa77f6a586ae5f3453e":"Security through obscurity. This isn't a thing.","d525092a5ce04839c012fb4a9ff75783":"You can teach your three year old to hack\n\nActually, don’t. They don’t understand consequences properly. Do you?\n\nNot much more than scan, cut-n-paste, or “try a couple things”.","3265deaf49af3454607f4b3d0718a620":"Tiny bit of history around Pixfor. My first serious PhoneGap app\n\nHonestly, Pixfor probably WAS almost this insecure\n\nLet’s hope that if I ever revive it, I do a better job than this ;)","0d8c3defdc33081511da7ce3d5a29356":"As easy as copy-pasting a URL into a downloaded tool…","af575b23edb1a0949ff71e4a97df8652":"Or, maybe changing your legal name ;)","32cc7e153ec5b06fb76647a748daf599":"‘ or 1=1; -- \n\nGet all albums\n\nGet private photos (semi-nude tommy)\n\nInject some XSS?\n\nShow sql-map","17f1213e8fcf7c385a5bf2e468bb17a6":"Sanitise inputs just like for XSS","a5599eaae86810607e27f61e28032375":"Yes. Cross Site Scripting.\n\nAlso possibly Cross APP Scripting using intents, etc","ef28f90918e550585f4fa04a96921ded":"Worst bit: Lostpass doesn’t have to XSS LastPass who are security aware. \n\nOnly has to XSS ANY web page a user might need auth for…","e6a9bed0b3b9c20c189ee2a1b1aab3a9":"Repetition, repetition\n\nTwo. Input, and target","3f32800a49f235a0eaed31992ec2b1c8":"Will go into more detail in a minute…","f0ba0fb306539839833a07a71341b6ad":"Again, more detail later…\n\nEmphasis on first two","252b6d674a7ce9619a0edc63ac7432cd":"eval() may be obvious. onclick, not so much. ","ca24a103532f52f0075a50be3669da05":"These are what we will mostly be focusing on today…","e12c9a2fc2751ba5ec6122cb2dfcb346":"Particularly worrisome in a PhoneGap app as there is no URL bar to say you are no longer in the app... think back to the LOSTPASS exploit.","675d5459cf4e08f60f5820075784bbac":"Try and use a tested third party solution from someone that knows what they are doing and has enough eyes on it that edge cases have been found.","d4a05873c6a079b53c005d5b344c398b":"I can't think of many situations where this would be actually useful. Just find another way to do what you were trying to do...","c3b3daccbb17f9beb74b6f35635efa7f":"We'll go through the first three in more detail, but the Whitelist and CSP deserve their own section....","741083502d28fe90cd4a11f8e7dd12f7":"So what can we do to mitigate XSS?","0e20fdc74a920b11b3ef9366d7ef5883":"Cannot stress this enough. \n\nSoftware fixing its security holes means nothing if the users of that software don't update.","91228175f806ce2595104e3285af12c1":"Frameworks can make development a great deal easier.\n\nI use them. Most of us do. \n\nHowever, it's worth knowing how the framework of your choice handles XSS and other potential security problems.","67ffa83bc159680b5cde7da1d53debed":"Although theoretically possible to MitM HTTPS traffic, it is significantly more difficult.\n\nIt also usually requires a state level actor or a rogue Certificate Authority.","a844f51e78df0816ddb507b49483f865":"Is there any way to protect our apps from this kind of interference?","0c12cb3212abee018f028a59d55468f9":"mitmproxy\n\nWatch API traffic (usernames, passwords, etc)\n\nIntercept and modify traffic","6a881610369c5ba2c35a001bd4b35bbe":"Too much to go into here... but this service will make it possible for anyone to have HTTPS if they need it.\n\nLet’s Encrypt is a free, automated, and open Certificate Authority.","b0dddc0ce55a91f2191b3b59d74499e9":"A Content Security Policy is a powerful tool.\n\nContent Security Policy (CSP) is an added layer of security.\n\nHelps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks.","38baae8140ab9580387f018dd56c3b50":"Might not have stopped some of the XSS attacks we were doing before, but it would have stopped them from sending to a malicious site for collection.\n\nWould certainly protect against URL targets.","54160e168ab78a527b63b99ae6999312":"Everything we have spoken about so far has been generic to the web.\n\nAs Hybrid apps use the same technologies, that makes sense... however there are some things to keep in mind that are more specific to apps created using Cordova.","3d80c980c75210828b9e5e8e60603cb9":"T.O.F.U == Trust On First Use"}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+
+				autoSlide: 0 || 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				loop: false,
+				rtl: false,
+
+				transition: "fade",
+				backgroundTransition: "zoom",
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
