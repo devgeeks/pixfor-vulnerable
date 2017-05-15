@@ -6,9 +6,9 @@ var myApp = new Framework7({
   animateNavBackIcon: true,
 });
 
-// var server = "http://take.pixfor.me:3000";
+var server = "http://take.pixfor.me:8080";
 // var server = "http://localhost:3000";
-var server = "http://192.168.1.19:3000";
+// var server = "http://192.168.1.19:3000";
 
 // If we need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
